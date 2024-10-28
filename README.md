@@ -16,4 +16,4 @@ For help getting started with Flutter development, view the
 samples, guidance on mobile development, and a full API reference.
 # furniture_shop_app
 
-![Sreccnshoot]([https://github.com/Gumiho2504/furniture_shop_app/blob/main/assets/simples/simple1.jpg](https://github.com/Gumiho2504/furniture_shop_app/blob/main/assets/simples/1.png))
+![Sreccnshoot]((https://github.com/Gumiho2504/furniture_shop_app/blob/main/assets/simples/1.png))![Sreccnshoot]((https://github.com/Gumiho2504/furniture_shop_app/blob/main/assets/simples/2.png))![Sreccnshoot]((https://github.com/Gumiho2504/furniture_shop_app/blob/main/assets/simples/3.png))
