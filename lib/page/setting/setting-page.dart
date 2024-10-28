@@ -38,7 +38,7 @@ class SettingPage extends StatelessWidget {
               style: GoogleFonts.montserrat(
                   fontSize: 26.h, fontWeight: FontWeight.w500),
             )
-
+// ggg
             // Icon(Iconsax.search_normal, size: 30.h)
           ],
         ),
