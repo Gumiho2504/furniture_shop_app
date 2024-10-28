@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:furniture_shop_app/page/cart/cart-page.dart';
+import 'package:furniture_shop_app/page/favoritePage/favorite-page.dart';
 import 'package:furniture_shop_app/page/home/home-page.dart';
+import 'package:furniture_shop_app/page/setting/setting-page.dart';
 import 'package:furniture_shop_app/provider/navigation-provider.dart';
 import 'package:furniture_shop_app/style/style.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -26,17 +29,11 @@ class NavigetionApp extends StatelessWidget {
       Iconsax.setting
     ];
 
-    final Page = [
-      HomePage(),
-      Container(
-        color: Colors.cyan,
-      ),
-      Container(
-        color: Colors.yellow,
-      ),
-      Container(
-        color: Colors.green,
-      ),
+    final _page = [
+      const HomePage(),
+      const CartPage(),
+      const FavoritePage(),
+      const SettingPage()
     ];
 
     _buttonBottomBarItem(String label, Icon icon, int selectIndex) {
@@ -66,12 +63,13 @@ class NavigetionApp extends StatelessWidget {
     }
 
     return Scaffold(
-      body: Page[navP.pageIndex],
+      backgroundColor: background,
+      body: _page[navP.pageIndex],
       bottomNavigationBar: SafeArea(
         child: Container(
-          height: 80.h,
+          height: 90.h,
           padding: EdgeInsets.symmetric(horizontal: 30.w),
-          // color: Colors.cyan,
+          color: background,
           child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: List.generate(

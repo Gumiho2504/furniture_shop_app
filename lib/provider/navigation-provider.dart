@@ -6,6 +6,6 @@ class NavigationProvider extends ChangeNotifier {
 
   void changePageIndex(int index) {
     _pageIndex = index;
-    notifyListeners(); // Notify listeners to rebuild widgets
+    notifyListeners();
   }
 }

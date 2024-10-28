@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:furniture_shop_app/page/detail/product-detail-page.dart';
 import 'package:furniture_shop_app/style/style.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:iconsax/iconsax.dart';
@@ -247,87 +248,93 @@ class _HomePageState extends State<HomePage> {
   }
 
   _smallProductBox() {
-    return Container(
-      height: 230.h,
-      width: 200.w,
-      margin: EdgeInsets.only(left: 10.w),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(18.h),
-        boxShadow: [
-          BoxShadow(
-              color: textSecondary.withOpacity(0.5),
-              offset: Offset.zero,
-              blurRadius: 0.01,
-              spreadRadius: 0.01)
-        ],
-        color: Colors.white,
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          Container(
-            height: 160.h,
-            margin: EdgeInsets.all(10.h),
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(18.h),
-                color: textSecondary.withOpacity(0.1),
-                image: const DecorationImage(
-                    scale: 2,
-                    fit: BoxFit.contain,
-                    image: AssetImage("assets/images/sofa.png"))),
-          ),
-          SizedBox(
-            height: 10.h,
-          ),
-          Container(
-            height: 60.h,
-            // color: Colors.cyan,
-            margin: EdgeInsets.only(left: 10.w, right: 10.w, bottom: 5.h),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                SizedBox(
-                  height: 50.h,
-                  //color: Colors.cyan,
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        "Draken Design",
-                        style: headline5,
-                      ),
-                      SizedBox(
-                        height: 5.h,
-                      ),
-                      Row(
-                        children: [
-                          Text(
-                            "\$214",
-                            style: GoogleFonts.montserrat(
-                                color: Colors.amber, fontSize: 12.h),
-                          ),
-                          SizedBox(
-                            width: 10.w,
-                          ),
-                          // Text(
-                          //   "\$250",
-                          //   style: GoogleFonts.montserrat(
-                          //       color: textSecondary,
-                          //       fontSize: 14.h,
-                          //       decoration: TextDecoration.lineThrough),
-                          // ),
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
-                _addToCartButton()
-              ],
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(context,
+            MaterialPageRoute(builder: (context) => const ProductDetailPage()));
+      },
+      child: Container(
+        height: 230.h,
+        width: 200.w,
+        margin: EdgeInsets.only(left: 10.w),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(18.h),
+          boxShadow: [
+            BoxShadow(
+                color: textSecondary.withOpacity(0.5),
+                offset: Offset.zero,
+                blurRadius: 0.01,
+                spreadRadius: 0.01)
+          ],
+          color: Colors.white,
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            Container(
+              height: 160.h,
+              margin: EdgeInsets.all(10.h),
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(18.h),
+                  color: textSecondary.withOpacity(0.1),
+                  image: const DecorationImage(
+                      scale: 2,
+                      fit: BoxFit.contain,
+                      image: AssetImage("assets/images/sofa.png"))),
             ),
-          ),
-        ],
+            SizedBox(
+              height: 10.h,
+            ),
+            Container(
+              height: 60.h,
+              // color: Colors.cyan,
+              margin: EdgeInsets.only(left: 10.w, right: 10.w, bottom: 5.h),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  SizedBox(
+                    height: 50.h,
+                    //color: Colors.cyan,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "Draken Design",
+                          style: headline5,
+                        ),
+                        SizedBox(
+                          height: 5.h,
+                        ),
+                        Row(
+                          children: [
+                            Text(
+                              "\$214",
+                              style: GoogleFonts.montserrat(
+                                  color: Colors.amber, fontSize: 12.h),
+                            ),
+                            SizedBox(
+                              width: 10.w,
+                            ),
+                            // Text(
+                            //   "\$250",
+                            //   style: GoogleFonts.montserrat(
+                            //       color: textSecondary,
+                            //       fontSize: 14.h,
+                            //       decoration: TextDecoration.lineThrough),
+                            // ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                  _addToCartButton()
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

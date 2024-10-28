@@ -6,6 +6,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 // Define colors
 const Color primary = Color(0xFF007BFF);
 const Color secondary = Color(0xFF666666);
+const Color thridColor = Color(0xFFECECEC);
 const Color background = Color(0xFCFFFFFF);
 const Color textPrimary = Color(0xFF333333);
 const Color textSecondary = Color(0xFFB0B0B0);

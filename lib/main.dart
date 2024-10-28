@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:furniture_shop_app/page/detail/product-detail-page.dart';
 import 'package:furniture_shop_app/page/home/home-page.dart';
 import 'package:furniture_shop_app/page/navigation.dart';
 import 'package:furniture_shop_app/provider/navigation-provider.dart';
